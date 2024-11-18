@@ -2,10 +2,10 @@
 title: Linux 기본 명령어
 date: 2024-11-18 
 categories: [Linux]
-tags: [linux, os, command]     # TAG names should always be lowercase
+tags: [Linux, os, command]     # TAG names should always be lowercase
 ---
-`linux` 계열의 운영체제를 사용하는 환경에서`terminal`을 통해 작업할 일이 많을 때 기본적으로 알고 있으면 좋을 것이다..! 
-이 외에도 많은 명령어들이 있지만, 기본적으로 사용되는 명령어에 초점을 두었다.
+`Linux OS`를 사용하는 환경에서`terminal`을 통해 작업할 일이 많을 때 기본적으로 알고 있으면 좋을 것이다..! 
+이 외에도 많은 명령어들이 있지만, 기본적으로 사용되는 명령어에 초점을 두었다.    추가로 명령어에 대한 다양한 옵션을 확인하고자 할 경우 `[명령어] --help`를 통해 알아보자..
 
 ## 기본 명령어
 
