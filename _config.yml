@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: MOONC # the main title
 
-tagline: 공부 목적 블로그.. # it will display as the subtitle
+tagline: 공부 목적 블로그..  #it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   MOONC의 공부 목적 블로그..
@@ -120,7 +120,7 @@ comments:
     repo_id: R_kgDONLRgvg
     category: Announcements
     category_id: DIC_kwDONLRgvs4CkYwU
-    mapping: title # optional, default to 'pathname'
+    mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
