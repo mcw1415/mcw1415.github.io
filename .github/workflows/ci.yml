@@ -23,7 +23,8 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted # Self-hosted 런너 사용
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
         ruby: ["3.1", "3.2", "3.3"]
@@ -32,18 +33,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # for posts's lastmod
 
-      - name: Setup Ruby Manually
-        run: |
-          RUBY_VERSION=${{ matrix.ruby }}
-          INSTALL_DIR="/opt/hostedtoolcache/Ruby/${RUBY_VERSION}/x64"
-          if [ ! -f "${INSTALL_DIR}.complete" ]; then
-            mkdir -p $INSTALL_DIR
-            ruby-build $RUBY_VERSION $INSTALL_DIR
-            touch "${INSTALL_DIR}.complete"
-          fi
-          echo "Ruby $RUBY_VERSION installed at $INSTALL_DIR"
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -55,4 +51,3 @@ jobs:
 
       - name: Test Site
         run: bash tools/test.sh
-
